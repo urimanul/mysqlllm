@@ -4,3 +4,4 @@ langchain-core
 langchain-text-splitters
 langsmith
 mysql-connector-python
+groq
