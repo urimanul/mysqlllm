@@ -1,6 +1,6 @@
-langchain
-langchain-community
-langchain-core
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-core==0.3.19
 langchain-text-splitters==0.2.2
 langsmith==0.1.88
 aiohttp==3.9.5
