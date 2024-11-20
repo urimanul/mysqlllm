@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from groq import Groq
 import mysql.connector as mydb
 
-#OPENAI_API_KEY=f"{api_key}"
+OPENAI_API_KEY=""
 
 # コネクションの作成
 conn = mydb.connect(
