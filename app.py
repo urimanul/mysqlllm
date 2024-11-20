@@ -18,7 +18,7 @@ def getDatabaseSchema():
 
 #llm = groq.ChatGroq(model="Llama-3.1-70b-Versatile", api_key="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")
 llm = Groq(
-    api_key=o"Llama-3.1-70b-Versatile"
+    api_key="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"
 )
 
 
