@@ -14,6 +14,7 @@ def runQuery(query):
 
 
 def getDatabaseSchema():
+    st.write(SQLDatabase.get_table_info())
     return st.session_state.db.get_table_info() if st.session_state.db else "Please connect to database"
 
 llm = Groq(
