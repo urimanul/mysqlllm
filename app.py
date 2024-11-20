@@ -3,6 +3,31 @@ from langchain_community.utilities import SQLDatabase
 from langchain_core.prompts import ChatPromptTemplate
 from groq import Groq
 
+#OPENAI_API_KEY=f"{api_key}"
+
+# コネクションの作成
+conn = mydb.connect(
+    host='www.ryhintl.com',
+    port='36000',
+    user='smairuser',
+    password='smairuser',
+    database='smair'
+)
+
+cur = conn.cursor()
+cur.execute("SELECT * FROM openai_payload")
+
+# 全てのデータを取得
+rows = cur.fetchall()
+    
+# Get api_key
+for (spoid, key_name, api_key) in rows:
+        OPENAI_API_KEY=f"{api_key}"
+        #api_key = f"{api_key}"
+        #print(api_key)
+    
+cur.close()
+conn.close()
 
 def connectDatabase(username, port, host, password, database):
     mysql_uri = f"mysql+mysqlconnector://{username}:{password}@{host}:{port}/{database}"
@@ -17,10 +42,11 @@ def getDatabaseSchema():
     st.write(SQLDatabase.get_table_info())
     return st.session_state.db.get_table_info() if st.session_state.db else "Please connect to database"
 
-llm = Groq(
+llm = ChatOpenAI(openai_api_key=f"{OPENAI_API_KEY}")
+#llm = Groq(
     #model="Llama-3.1-70b-Versatile",
-    api_key="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"
-)
+    #api_key="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"
+#)
 
 
 def getQueryFromLLM(question):
