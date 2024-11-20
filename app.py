@@ -117,9 +117,9 @@ if question:
         })
 
         query = getQueryFromLLM(question)
-        print(query)
+        #print(query)
         result = runQuery(query)
-        print(result)
+        #print(result)
         response = getResponseForQueryResult(question, query, result)
         st.session_state.chat.append({
             "role": "assistant",
