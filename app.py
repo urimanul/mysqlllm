@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_community.utilities.sql_database import SQLDatabase
+from langchain_community.utilities import SQLDatabase
 from langchain_core.prompts import ChatPromptTemplate
 from groq import Groq
 
