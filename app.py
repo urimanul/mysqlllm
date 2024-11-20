@@ -2,6 +2,7 @@ import streamlit as st
 from langchain_community.utilities import SQLDatabase
 from langchain_core.prompts import ChatPromptTemplate
 from groq import Groq
+from langchain_openai import ChatOpenAI
 import mysql.connector as mydb
 
 OPENAI_API_KEY=""
