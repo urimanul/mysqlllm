@@ -17,7 +17,7 @@ def getDatabaseSchema():
     return st.session_state.db.get_table_info() if st.session_state.db else "Please connect to database"
 
 #llm = groq.ChatGroq(model="Llama-3.1-70b-Versatile", api_key="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")
-llm = groq.ChatGroq(model="Llama-3.1-70b-Versatile")
+llm = Groq.ChatGroq(model="Llama-3.1-70b-Versatile")
 
 
 def getQueryFromLLM(question):
