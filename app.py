@@ -61,7 +61,7 @@ def getQueryFromLLM(question):
 
     for example:
     question: how many employees we have in database
-    SQL query: SELECT COUNT(*) FROM  emp_info
+    SQL query: SELECT COUNT(*) FROM  emp_acl
     question: how many customers are from 東京都 in the database ?
     SQL query: SELECT COUNT(*) FROM customer WHERE customerpref='東京都'
 
@@ -90,7 +90,7 @@ def getResponseForQueryResult(question, query, result):
 
     Here are some example for you:
     question: how many employees we have in database
-    SQL query: SELECT COUNT(*) FROM emp_info;
+    SQL query: SELECT COUNT(*) FROM emp_acl;
     Result : [(6,)]
     Response: There are 6 employees in the database.
 
